@@ -35,7 +35,7 @@ I also ran a sensitivity test by removing the top observer's records, to check w
    `observation.csv` in this folder.
 2. Install the packages: `pip install -r requirements.txt`
 3. Run: `python analysis.py`
-
+4. Optional: run `python sensitivity_analysis.py` for the check without the top observer.
 ## Credits
 
 Data from the Biodiversity of CUK, India project on iNaturalist, contributed
