@@ -4,7 +4,8 @@ df = pd.read_csv("observation.csv")
 
 insecta = df[df['iconic_taxon_name'] == 'Insecta']
 insecta_research_grade = insecta[insecta['quality_grade'] == 'research']
-insecta_research_grade = insecta_research_grade[insecta_research_grade['user_login'] != 'ganesh66491']
+top_observer = insecta_research_grade['user_login'].value_counts().idxmax()
+insecta_research_grade = insecta_research_grade[insecta_research_grade['user_login'] != top_observer]
 
 print(insecta_research_grade[['iconic_taxon_name','scientific_name','quality_grade','observed_on','user_name']])
 print("Research Grade == ",len(insecta_research_grade))
